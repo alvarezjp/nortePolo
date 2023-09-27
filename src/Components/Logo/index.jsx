@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { colorLogo1,colorLogo2 } from "../UI/variables";
+import { colorLogo1,colorLogo2,fontFira } from "../UI/variables";
 
 const StyledLogo = styled.h1`
-font-family: 'Fira Sans Extra Condensed', sans-serif;
+font-family: ${fontFira};
 font-size: 37px;
 color: ${colorLogo2};
 border: 5px solid white;

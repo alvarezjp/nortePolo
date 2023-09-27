@@ -10,9 +10,9 @@ const StyledHeader = styled.section`
   align-items: center;
   list-style: none;
   color: white;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  height: 100px
+  height: 100px;
 `;
 
 const Header = () => {

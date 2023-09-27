@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BsFillBasketFill } from "react-icons/bs";
-import { colorWhite } from "../UI/variables";
+import { colorWhite,fontFira } from "../UI/variables";
 
 
 const StyledNav = styled.ul`
@@ -10,7 +10,7 @@ flex-direction: row;
 justify-content: space-around;
 align-items: baseline;
 width: 600px;
-font-family: 'Fira Sans Extra Condensed', sans-serif;
+font-family: ${fontFira};
 font-size: 18px;
 font-weight: 400;
 box-sizing: border-box;
