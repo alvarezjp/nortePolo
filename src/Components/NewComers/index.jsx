@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colorWhite, fontFira } from "../UI/variables";
-import { Tiltle,SubTitle } from "../ImgIngress";
+import { Title, SubTitle } from "../UI";
 
 const StyledNewComers = styled.section`
   display: flex;
@@ -16,6 +15,10 @@ const BoxText = styled.h2`
   box-sizing: border-box;
 `;
 
+const StyledTitle=styled(Title)`
+font-size: 60px;
+line-height: normal;
+`
 
 const StyledImg = styled.div`
   background-image: url("/public/pagPrincipal/img-2.png");
@@ -29,9 +32,9 @@ const NewComers = () => {
   return (
     <StyledNewComers>
       <BoxText>
-        <Tiltle>Recien </Tiltle>
-        <Tiltle>Leguegados </Tiltle>
-        <SubTitle>COMPRAR AHORA</SubTitle>
+        <StyledTitle>RECIÉN</StyledTitle>
+        <StyledTitle>LLEGADOS</StyledTitle>
+        <SubTitle> COMPRAR AHORA</SubTitle>
       </BoxText>
       <StyledImg />
     </StyledNewComers>

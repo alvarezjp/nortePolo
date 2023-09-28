@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../Header";
 import { colorWhite, fontFira, fontPlay } from "../UI/variables";
 import { HiChevronDown } from "react-icons/hi";
+import { SubTitle, Title } from "../UI";
 
 const StyledIngress = styled.section`
   background-image: url("/public/pagPrincipal/img_1.png");
@@ -12,22 +13,11 @@ const StyledIngress = styled.section`
   box-sizing: border-box;
   /* border: 1px solid red; */
 `;
-export const Tiltle = styled.h2`
-  display: flex;
-  justify-content: center;
-  font-family: ${fontFira};
-  color: ${colorWhite};
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 90px;
+export const StyledTiltle = styled(Title)`
   padding-top: 25vh;
 `;
 
-export const SubTitle = styled.h3`
-  font-family: ${fontPlay};
-  color: ${colorWhite};
-  font-weight: 500;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 24px;
+export const StyledSubTitle = styled(SubTitle)`  
   margin-top: -15vh;;
 `;
 
@@ -50,8 +40,8 @@ const ImgIngress = () => {
     <StyledIngress>
       <Header />
       <Block>
-        <Tiltle>PLANEA TU AVENTURA</Tiltle>
-        <SubTitle>COMPRAR AHORA</SubTitle>
+        <StyledTiltle>PLANEA TU AVENTURA</StyledTiltle>
+        <StyledSubTitle>COMPRAR AHORA</StyledSubTitle>
         <HiChevronDown className="down" />
       </Block>
     </StyledIngress>
