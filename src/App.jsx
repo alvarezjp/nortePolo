@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import GlobalStyle from "./GlobalStyle";
 import ImgIngress from "./Components/ImgIngress";
 import NewComers from "./Components/NewComers";
+import ImgMenu from "./Components/ImgMenu";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyle />
         <ImgIngress />
         <NewComers/>
+        <ImgMenu/>
     </>
   );
 }
