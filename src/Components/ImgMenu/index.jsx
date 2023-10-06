@@ -1,25 +1,61 @@
 import styled from "styled-components";
-import React from "react";
-import img3 from "../../assets/img/menuPrincipal/img-3.png";
-import img4 from "../../assets/img/menuPrincipal/img-4.png";
-import img5 from "../../assets/img/menuPrincipal/img-5.png";
+import React, { useState } from "react";
 import { MenuImg } from "../UI";
 
 const StyledImgMenu = styled.section`
   display: flex;
   box-sizing: border-box;
+  border: 5px solid black;
 `;
-const StyledCuadro = styled.article`
-display: flex;
-`
+const StyledText = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding: 10px; */
+  color: white;
+  font-size: 30px;
+  text-align: center;
+`;
 
+const StyleBox = styled.div`
+  position: relative;
+  flex: 1;
+`;
+
+const ImgText = (props) => {
+  const [mostrarTexto, actualizarMostrar] = useState(false);
+
+  const cambiarMostrar = () => {
+    actualizarMostrar(!mostrarTexto);
+  };
+  return (
+    <StyleBox>
+      <MenuImg
+        backgroundImage={props.backgroundImage}
+        onMouseEnter={cambiarMostrar}
+        onMouseLeave={cambiarMostrar}
+      />
+      {mostrarTexto && <StyledText>{props.content}</StyledText>}
+    </StyleBox>
+  );
+};
 
 const ImgMenu = () => {
   return (
     <StyledImgMenu>
-      <MenuImg src={img3} alt="Mochilas"/>
-      <MenuImg src={img4} alt="Bolsos de lona" />
-      <MenuImg src={img5} alt="Bolsos de viaje" />
+      <ImgText
+        backgroundImage="/public/pagPrincipal/img-3.png"
+        content="HOla"
+      />
+      <ImgText
+        backgroundImage="/public/pagPrincipal/img-4.png"
+        content="Chao"
+      />
+      <ImgText
+        backgroundImage="/public/pagPrincipal/img-5.png"
+        content="Quetal "
+      />
     </StyledImgMenu>
   );
 };

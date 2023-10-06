@@ -18,21 +18,20 @@ export const SubTitle = styled.h3`
   line-height: normal;
 `;
 
-export const MenuImg = styled.img`
-  width: 33vw;
+ export const MenuImg = styled.article`
+  width: 33.9vw;
   height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:${(props) => `url(${props.backgroundImage})`};
   background-position: center bottom;
   background-size: cover;
   box-sizing: border-box;
-  /* &:hover {
-    filter: brightness(40%);
-   
+  &:hover {
+    filter: brightness(30%);
+
   }
-
-  ::after {
-  content: "Texto en Hover"; 
- 
-} */
-
-
 `;
+
+
