@@ -6,7 +6,7 @@ import { HiChevronDown } from "react-icons/hi";
 import { SubTitle, Title } from "../UI";
 
 const StyledIngress = styled.section`
-  background-image: url("/public/pagPrincipal/img_1.png");
+  background-image: url("/pagPrincipal/img_1.png");
   background-position: center bottom;
   background-size: cover;
   height: 100vh;

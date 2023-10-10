@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { fontFira, colorWhite, fontPlay } from "./variables";
 
-export const Title = styled.h2`
+export const Title = styled.p`
   font-family: ${fontFira};
   color: ${colorWhite};
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -9,7 +9,7 @@ export const Title = styled.h2`
   letter-spacing: 4px;
 `;
 
-export const SubTitle = styled.h3`
+export const SubTitle = styled.p`
   font-family: ${fontPlay};
   color: ${colorWhite};
   font-weight: 500;
@@ -18,20 +18,6 @@ export const SubTitle = styled.h3`
   line-height: normal;
 `;
 
- export const MenuImg = styled.article`
-  width: 33.9vw;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image:${(props) => `url(${props.backgroundImage})`};
-  background-position: center bottom;
-  background-size: cover;
-  box-sizing: border-box;
-  &:hover {
-    filter: brightness(30%);
 
-  }
-`;
 
 

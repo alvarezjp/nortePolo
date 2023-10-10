@@ -4,6 +4,7 @@ import GlobalStyle from "./GlobalStyle";
 import ImgIngress from "./Components/ImgIngress";
 import NewComers from "./Components/NewComers";
 import ImgMenu from "./Components/ImgMenu";
+import Oferta from "./Components/Oferta/Oferta";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <ImgIngress />
         <NewComers/>
         <ImgMenu/>
+        <Oferta/>
     </>
   );
 }

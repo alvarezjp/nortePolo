@@ -21,7 +21,7 @@ line-height: normal;
 `
 
 const StyledImg = styled.div`
-  background-image: url("/public/pagPrincipal/img-2.png");
+  background-image: url("/pagPrincipal/img-2.png");
   background-position: center;
   background-size: cover;
   width: 50vw;

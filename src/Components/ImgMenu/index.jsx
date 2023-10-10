@@ -1,42 +1,30 @@
-import styled from "styled-components";
 import React, { useState } from "react";
-import { MenuImg } from "../UI";
-
-const StyledImgMenu = styled.section`
-  display: flex;
-  box-sizing: border-box;
-  border: 5px solid black;
-`;
-const StyledText = styled.p`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* padding: 10px; */
-  color: white;
-  font-size: 30px;
-  text-align: center;
-`;
-
-const StyleBox = styled.div`
-  position: relative;
-  flex: 1;
-`;
+import { CSSTransition } from "react-transition-group";
+import { StyleBox, StyledImgMenu, StyledText,MenuImg } from "./style";
 
 const ImgText = (props) => {
   const [mostrarTexto, actualizarMostrar] = useState(false);
-
-  const cambiarMostrar = () => {
+  const setEstados = () => {
     actualizarMostrar(!mostrarTexto);
   };
   return (
     <StyleBox>
-      <MenuImg
-        backgroundImage={props.backgroundImage}
-        onMouseEnter={cambiarMostrar}
-        onMouseLeave={cambiarMostrar}
-      />
-      {mostrarTexto && <StyledText>{props.content}</StyledText>}
+      <div
+        onMouseEnter={setEstados}
+        onMouseLeave={setEstados}
+        style={{ position: "relative" }}>
+        <MenuImg
+          $backgroundImage={props.$backgroundImage}
+          $actiFilter={mostrarTexto}
+        />
+        <CSSTransition
+          in={mostrarTexto}
+          timeout={{ enter: 300, exit: 200 }}
+          classNames="fade"
+          unmountOnExit>
+          <StyledText>{props.content}</StyledText>
+        </CSSTransition>
+      </div>
     </StyleBox>
   );
 };
@@ -45,16 +33,16 @@ const ImgMenu = () => {
   return (
     <StyledImgMenu>
       <ImgText
-        backgroundImage="/public/pagPrincipal/img-3.png"
-        content="HOla"
+        $backgroundImage="/pagPrincipal/img-3.png"
+        content="MOCHILAS"
       />
       <ImgText
-        backgroundImage="/public/pagPrincipal/img-4.png"
-        content="Chao"
+        $backgroundImage="/pagPrincipal/img-4.png"
+        content="BOLSOS DE LONA"
       />
       <ImgText
-        backgroundImage="/public/pagPrincipal/img-5.png"
-        content="Quetal "
+        $backgroundImage="/pagPrincipal/img-5.png"
+        content="BOLSOS DE VIAJE "
       />
     </StyledImgMenu>
   );
