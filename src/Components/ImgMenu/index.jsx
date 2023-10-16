@@ -19,7 +19,7 @@ const ImgText = (props) => {
         />
         <CSSTransition
           in={mostrarTexto}
-          timeout={{ enter: 300, exit: 200 }}
+          timeout={{ enter: 150, exit: 200 }}
           classNames="fade"
           unmountOnExit>
           <StyledText>{props.content}</StyledText>

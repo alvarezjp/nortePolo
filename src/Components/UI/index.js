@@ -16,6 +16,7 @@ export const SubTitle = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 24px;
   line-height: normal;
+
 `;
 
 
