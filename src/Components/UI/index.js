@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontFira, colorWhite, fontPlay } from "./variables";
+import { fontFira, colorWhite, fontPlay, fontMavenPro } from "./variables";
 
 export const Title = styled.p`
   font-family: ${fontFira};
@@ -16,9 +16,12 @@ export const SubTitle = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 24px;
   line-height: normal;
-
 `;
 
+export const TextParagraph = styled.p`
+font-family: ${fontMavenPro};
+color:${colorWhite};
+`
 
 
 

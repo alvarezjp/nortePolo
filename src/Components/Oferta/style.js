@@ -3,13 +3,14 @@ import { SubTitle, Title } from "../UI";
 
 export const StyledOferta = styled.section`
   height: 100vh;
-  width: 98, 5vw;
+  width: auto;
   background-color: black;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 400px 0px;
 `;
 
 export const StyledTiltle = styled(Title)`
@@ -70,7 +71,7 @@ export const MiniBox = styled(BoxDetails)`
   }
   &.fade-enter-active {
     opacity: 1;
-    transition: opacity 700ms ease, transform 400ms ease;
+    transition: opacity 100ms ease, transform 300ms ease;
   }
   &.fade-exit {
     opacity: 1;
@@ -78,7 +79,7 @@ export const MiniBox = styled(BoxDetails)`
 
   &.fade-exit-active {
     opacity: 0;
-    transition: opacity 1000ms ease, transform 800ms ease;
+    transition: opacity 300ms ease, transform 800ms ease;
   }
 `;
 
