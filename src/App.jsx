@@ -8,6 +8,7 @@ import Oferta from "./Components/Oferta/Oferta";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import JoinUp from "./Components/JoinUp/Index";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <About/>
         <Contact/>
         <JoinUp/>
+        <Footer/>
     </>
   );
 }
