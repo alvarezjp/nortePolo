@@ -22,6 +22,7 @@ const Styleinput = styled.input`
   width: 30vw;
   height: 45px;
   box-sizing: border-box;
+  outline: none;
   &:hover {
     border: 4px solid gray;
   }
@@ -37,6 +38,7 @@ const StyleTextArea = styled.textarea`
   height: auto;
   border: 1px solid green;
   box-sizing: border-box;
+  outline: none;
   &:hover {
     border: 4px solid gray;
   }
@@ -50,7 +52,7 @@ const StyledButton = styled.button`
   font-weight: 600;
 `;
 
-const Campo = (props) => {
+export const Campo = (props) => {
   return (
     <>
       <Styleinput type={props.tipo} placeholder={props.etiqueta} required />

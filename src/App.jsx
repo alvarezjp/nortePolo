@@ -7,6 +7,7 @@ import ImgMenu from "./Components/ImgMenu";
 import Oferta from "./Components/Oferta/Oferta";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
+import JoinUp from "./Components/JoinUp/Index";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <GlobalStyle />
         <ImgIngress />
         <NewComers/>
-        <ImgMenu/>
+        <ImgMenu/> {/*Debo cambiar la transicion en este componente */}
         <Oferta/>
         <About/>
         <Contact/>
+        <JoinUp/>
     </>
   );
 }
