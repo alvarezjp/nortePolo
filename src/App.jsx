@@ -6,6 +6,7 @@ import NewComers from "./Components/NewComers";
 import ImgMenu from "./Components/ImgMenu";
 import Oferta from "./Components/Oferta/Oferta";
 import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ImgMenu/>
         <Oferta/>
         <About/>
+        <Contact/>
     </>
   );
 }
