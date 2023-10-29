@@ -13,15 +13,17 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <>
+      
+      <Header/>      
       <GlobalStyle />
-        <ImgIngress />
-        <NewComers/>
-        <ImgMenu/> {/*Debo cambiar la transicion en este componente */}
-        <Oferta/>
-        <About/>
-        <Contact/>
-        <JoinUp/>
-        <Footer/>
+      <ImgIngress />
+      <NewComers />
+      <ImgMenu /> {/*Debo cambiar la transicion en este componente */}
+      <Oferta />
+      <About />
+      <Contact />
+      <JoinUp />
+      <Footer />
     </>
   );
 }

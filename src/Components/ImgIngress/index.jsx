@@ -38,7 +38,6 @@ const Block = styled.article`
 const ImgIngress = () => {
   return (
     <StyledIngress>
-      <Header />
       <Block>
         <StyledTiltle>PLANEA TU AVENTURA</StyledTiltle>
         <StyledSubTitle>COMPRAR AHORA</StyledSubTitle>

@@ -23,6 +23,7 @@ const Styleinput = styled.input`
   height: 45px;
   box-sizing: border-box;
   outline: none;
+  margin-bottom: 8px;
   &:hover {
     border: 4px solid gray;
   }
@@ -50,6 +51,7 @@ const StyledButton = styled.button`
   font-family: ${fontMavenPro};
   font-size: 22px;
   font-weight: 600;
+  margin-top: 8px;
 `;
 
 export const Campo = (props) => {
@@ -65,7 +67,7 @@ const Form = () => {
     <>
       <Campo etiqueta="Nombre" tipo="text" />
       <Campo etiqueta="Email" tipo="email" />
-      <Campo etiqueta="Telefono" />
+      <Campo etiqueta="Telefono" tipo="tel"/>
       <StyleTextArea rows="5" cols="2" placeholder="Escribe tu mensaje" />
       <StyledButton>Enviar</StyledButton>
     </>

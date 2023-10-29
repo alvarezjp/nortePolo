@@ -17,7 +17,6 @@ export const FormContact = styled.form`
   width: 30vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: end;
 `;
 export const BoxTitleContact = styled.article`
