@@ -1,30 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Components/Header";
-import GlobalStyle from "./GlobalStyle";
-import ImgIngress from "./Components/ImgIngress";
-import NewComers from "./Components/NewComers";
-import ImgMenu from "./Components/ImgMenu";
-import Oferta from "./Components/Oferta/Oferta";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import JoinUp from "./Components/JoinUp/Index";
+import Initial from "./Components/Initial/Index";
 import Footer from "./Components/Footer";
+import SocialNetwork from "./Components/SocialNetworks";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
-      
-      <Header/>      
-      <GlobalStyle />
-      <ImgIngress />
-      <NewComers />
-      <ImgMenu /> {/*Debo cambiar la transicion en este componente */}
-      <Oferta />
-      <About />
-      <Contact />
-      <JoinUp />
+    <Router>
+      <Header />
+      <SocialNetwork />
+      <Routes>
+        <Route path="/" element={<Initial />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

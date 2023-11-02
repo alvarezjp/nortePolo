@@ -30,7 +30,7 @@ const StyledImg = styled.div`
 
 const NewComers = () => {
   return (
-    <StyledNewComers>
+    <StyledNewComers id="down">
       <BoxText>
         <StyledTitle>RECIÉN</StyledTitle>
         <StyledTitle>LLEGADOS</StyledTitle>

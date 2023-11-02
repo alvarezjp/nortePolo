@@ -1,24 +1,27 @@
 import styled from "styled-components";
 import React from "react";
-import Header from "../Header";
 import { colorWhite, fontFira, fontPlay } from "../UI/variables";
 import { HiChevronDown } from "react-icons/hi";
 import { SubTitle, Title } from "../UI";
+import { Link as ScrollLink } from "react-scroll";
 
 const StyledIngress = styled.section`
-  background-image: url("/pagPrincipal/img_1.png");
-  background-position: center bottom;
+  background-image: url("/pagPrincipal/img-1.png");
+  background-position: center;
   background-size: cover;
   height: 100vh;
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 export const StyledTiltle = styled(Title)`
-  padding-top: 25vh;
+  padding-top: 15vh;
 `;
 
-export const StyledSubTitle = styled(SubTitle)`  
-  margin-top: -15vh;;
+export const StyledSubTitle = styled(SubTitle)`
+  font-weight: 600;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0);
 `;
 
 const Block = styled.article`
@@ -27,21 +30,24 @@ const Block = styled.article`
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  height: 84vh;
-
+  height: 70vh;
+  margin-top: 25vh;
   .down {
-    font-size: 10vh;
+    font-size: 100px;
     color: ${colorWhite};
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
 const ImgIngress = () => {
   return (
-    <StyledIngress>
+    <StyledIngress id="start">
       <Block>
         <StyledTiltle>PLANEA TU AVENTURA</StyledTiltle>
         <StyledSubTitle>COMPRAR AHORA</StyledSubTitle>
-        <HiChevronDown className="down" />
+        <ScrollLink  activeClass='active' to='down'spy={true} smooth={true} offset={-100} duration={500}><HiChevronDown className="down" /> </ScrollLink>
       </Block>
     </StyledIngress>
   );

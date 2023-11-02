@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useState}from "react";
 import styled from "styled-components";
 import { BsFillBasketFill } from "react-icons/bs";
 import { colorWhite,fontFira } from "../UI/variables";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
+
+
 
 
 const StyledNav = styled.ul`
@@ -27,18 +32,19 @@ p,li:hover{
 p{
   color:${colorWhite}
 }
+
 `
 
 const Menu = () => {
   return (
     <StyledNav>
-      <p>INICIO</p>
+      <p><ScrollLink  activeClass='active' to='start' spy={true} smooth={true} offset={0} duration={500}>INICIO</ScrollLink></p>
       <li>COMPRAR</li>
-      <li>SOBRE NOSOTROS</li>
-      <li>CONTACTO</li>
+      <li><ScrollLink activeClass='active' to='about' spy={true} smooth={true} offset={-100} duration={500}> SOBRE NOSOTROS</ScrollLink></li>
+      <li><ScrollLink activeClass='active' to='contact' spy={true} smooth={true} offset={0} duration={500} >CONTACTO</ScrollLink></li>
       <li><BsFillBasketFill className="basket"/></li>
     </StyledNav>
   );
 };
 
-export default Menu
+export default Menu;

@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { StyledContact, FormContact, BoxTitleContact } from "./styled";
 import { SubTitle, TextParagraph, Title } from "../UI/index";
 import { fontFira, fontMavenPro } from "../UI/variables";
+;
 
 const TitleContact = styled(Title)`
   font-size: 60px;
   margin-bottom: 10px;
-
 `;
 const TextContact = styled(TextParagraph)`
   font-size: 22px;
@@ -67,7 +67,7 @@ const Form = () => {
     <>
       <Campo etiqueta="Nombre" tipo="text" />
       <Campo etiqueta="Email" tipo="email" />
-      <Campo etiqueta="Telefono" tipo="tel"/>
+      <Campo etiqueta="Telefono" tipo="tel" />
       <StyleTextArea rows="5" cols="2" placeholder="Escribe tu mensaje" />
       <StyledButton>Enviar</StyledButton>
     </>
@@ -76,19 +76,21 @@ const Form = () => {
 
 const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact" >
       <FormContact>
         <Form />
       </FormContact>
       <BoxTitleContact>
         <TitleContact>CONTACTO</TitleContact>
-        <TextContact style={{lineHeight:1.1 }}>
+        <TextContact style={{ lineHeight: 1.1 }}>
           Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí
           puedes contar tu historia y permitir a tus usuarios saber más sobre
           ti.
         </TextContact>
         <div>
-          <TextContact style={{marginBottom:"0px"}}>info@misitio.com</TextContact>
+          <TextContact style={{ marginBottom: "0px" }}>
+            info@misitio.com
+          </TextContact>
           <TextContact>Tel: 914-123-456</TextContact>
         </div>
       </BoxTitleContact>

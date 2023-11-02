@@ -35,7 +35,7 @@ line-height: 1.4em;
 
 const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <BoxAbout>
         <TitleAbout>SOBRE NOTROS</TitleAbout>
         <TextAbout>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam suscipit voluptates fugiat debitis quas numquam alias error enim beatae deserunt velit laudantium cupiditate eligendi nam porro, impedit animi. Explicabo, perspiciatis.</TextAbout>
