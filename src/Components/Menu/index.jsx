@@ -1,50 +1,25 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { BsFillBasketFill } from "react-icons/bs";
-import { colorWhite, fontFira } from "../UI/variables";
 import { Link as ScrollLink } from "react-scroll";
-
-const StyledNav = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: baseline;
-  width: 600px;
-  font-family: ${fontFira};
-  font-size: 18px;
-  font-weight: 400;
-  box-sizing: border-box;
-  margin-right: 64px;
-  color: #888383;
-  p,
-  li:hover {
-    color: ${colorWhite};
-    cursor: pointer;
-  }
-  .basket {
-    font-size: 25px;
-  }
-
-  p {
-    color: ${colorWhite};
-  }
-`;
-
-const StyledBtnCompra = styled.li`
-color:red;
-`
-
-const StyledDropDown = styled.div`
-
-
-`
+import { StyledNav, StyledBtnCompra, StyledDropDown } from "./styled";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
+  let timeOut;
   const [btnCompraOpen, setCompraOpen] = useState(false);
   const toggleBtnCompra = () => {
     setCompraOpen(!btnCompraOpen);
-    console.log(btnCompraOpen);
-  }
+  };
+  const retrasoLeave = () => {
+    timeOut = setTimeout(() => {
+      toggleBtnCompra();
+      console.log("saliendo");
+    }, 500);
+  };
+
+  const DeleteTemporizador = () => {
+    clearTimeout(timeOut);
+  };
 
   return (
     <StyledNav>
@@ -59,19 +34,21 @@ const Menu = () => {
           INICIO
         </ScrollLink>
       </p>
-      <StyledBtnCompra onClick={toggleBtnCompra}>COMPRAR</StyledBtnCompra>
-      {btnCompraOpen&&(
-        <StyledDropDown>
-          <ul>
-            <li>
-              Mochila
-            </li>
-          </ul>
-        </StyledDropDown>
+      <div>
+        <StyledBtnCompra
+          onMouseEnter={toggleBtnCompra}
+          onMouseLeave={retrasoLeave}>
+          COMPRAR
+        </StyledBtnCompra>
+        {btnCompraOpen && (
+          <StyledDropDown onMouseEnter={DeleteTemporizador} onMouseLeave={retrasoLeave}>
+            <li>Mochila</li>
+            <li>Bolsas de lona</li>
+            <li>Mochilas de viaje</li>
+          </StyledDropDown>
+        )}
+      </div>
 
-      )
-
-      }
       <li>
         <ScrollLink
           activeClass="active"
