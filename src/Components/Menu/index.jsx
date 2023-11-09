@@ -3,17 +3,20 @@ import { BsFillBasketFill } from "react-icons/bs";
 import { Link as ScrollLink } from "react-scroll";
 import { StyledNav, StyledBtnCompra, StyledDropDown } from "./styled";
 import { Link } from "react-router-dom";
+import { TextareaAutosize } from "@mui/material";
 
 const Menu = () => {
   let timeOut;
+
   const [btnCompraOpen, setCompraOpen] = useState(false);
-  const toggleBtnCompra = () => {
-    setCompraOpen(!btnCompraOpen);
+
+  const activateBtn = () => {
+    setCompraOpen(true);
   };
+
   const retrasoLeave = () => {
     timeOut = setTimeout(() => {
-      toggleBtnCompra();
-      console.log("saliendo");
+      setCompraOpen(false)
     }, 500);
   };
 
@@ -34,9 +37,10 @@ const Menu = () => {
           INICIO
         </ScrollLink>
       </p>
+      
       <div>
         <StyledBtnCompra
-          onMouseEnter={toggleBtnCompra}
+          onMouseEnter={activateBtn}
           onMouseLeave={retrasoLeave}>
           COMPRAR
         </StyledBtnCompra>
