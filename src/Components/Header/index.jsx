@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Logo";
 import Menu from "../Menu";
 import styled from "styled-components";
+import { BsFillBasketFill } from "react-icons/bs";
 
 const StyledHeader = styled.section`
   position: fixed;
