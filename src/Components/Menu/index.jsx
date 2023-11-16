@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsFillBasketFill } from "react-icons/bs";
-import { CiCircleList } from "react-icons/ci";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Link as ScrollLink } from "react-scroll";
 import {
   StyledNav,
@@ -16,6 +16,7 @@ const Menu = () => {
   let timeOut;
 
   const [btnCompraOpen, setCompraOpen] = useState(false);
+  const [btnBurguer,setBtnBurguer] = useState(false);
 
   const activateBtn = () => {
     setCompraOpen(true);
@@ -28,6 +29,9 @@ const Menu = () => {
   const DeleteTemporizador = () => {
     clearTimeout(timeOut);
   };
+  const amburguesa = ()=> {
+    console.log("mostrando");
+  }
 
   return (
     <StyledNav>
@@ -84,8 +88,10 @@ const Menu = () => {
           </ScrollLink>
         </li>
       </StyledItems>
-      <BsFillBasketFill className="basket" style={{color:"#888383",fontSize:"24px"}} />
-      
+     <BsFillBasketFill className="basket"/>
+     <GiHamburgerMenu className="cicleList" onClick={amburguesa}>
+
+     </GiHamburgerMenu>
     </StyledNav>
   );
 };

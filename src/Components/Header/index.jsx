@@ -17,6 +17,9 @@ const StyledHeader = styled.section`
   height: 100px;
   width: 100vw;
   z-index: 100;
+  @media screen and (max-width: 1044px) {
+    justify-content: center;
+  }
 `;
 
 const Header = () => {
