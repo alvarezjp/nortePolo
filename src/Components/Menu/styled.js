@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { BsController } from "react-icons/bs";
-import { colorWhite, fontFira, fontMavenPro } from "../UI/variables";
+import { colorWhite, fontFira, fontMavenPro, responsive1 } from "../UI/variables";
+
 
 export const StyledNav = styled.article`
   display: flex;
@@ -21,21 +22,26 @@ export const StyledNav = styled.article`
     color: #888383;
     font-size: 24px;
   }
-  @media screen and (max-width: 1044px) {
+  @media screen and (max-width: ${responsive1}){
+    gap: 50px;
+  }
+  /* @media screen and (max-width: ${responsive1}) {
     .basket {
       position: absolute;
       right: 36px;
-      top:35px;
+      top: 35px;
       font-size: 30px;
+      
     }
     .cicleList {
       display: block;
       position: absolute;
       left: 36px;
-      top:35px;
+      top: 35px;
       font-size: 30px;
+      
     }
-  }
+  } */
 `;
 
 export const StyledItems = styled.ul`
@@ -57,9 +63,8 @@ export const StyledItems = styled.ul`
   p {
     color: ${colorWhite};
   }
-  @media screen and (max-width: 1044px) {
-    border: 1px solid green;
-    display: none;
+  @media screen and (max-width: ${responsive1}) {
+    width: 450px;
   }
 `;
 
@@ -73,14 +78,37 @@ export const StyledDropDown = styled.ul`
   flex-direction: column;
   text-align: center;
   position: absolute;
-  margin-top: 34px;
-  right: 430px;
+  margin-top: 38px;
+  right: 470px;
   gap: 10px;
   box-sizing: border-box;
   padding: 4px 10px;
   font-family: ${fontFira};
   letter-spacing: 0.2px;
   font-size: 18px;
+  @media screen and (max-width:${responsive1} ){
+    right: 400px;
+  }
+  
+`;
+
+export const StyledBurgerDown = styled(StyledDropDown)`
+@media screen and (max-width: ${responsive1}) {
+    background-color: rgba(0, 0, 0, 1);
+    width: 30vw;
+    height: 100vh;
+    left: 0px;
+    padding-top: 10vh;
+    margin-top: 50px;
+    font-size: 30px;
+    gap: 10px;
+    border: 1px solid green;
+    >*{
+      border-bottom: 1px dashed white;
+      
+    }
+  
+  }
 `;
 
 export const StyledNavRes = styled.nav`
@@ -92,3 +120,5 @@ export const StyledNavRes = styled.nav`
     display: grid;
   } */
 `;
+
+// debemos ver la distancia que hay entre los elementos del navbar

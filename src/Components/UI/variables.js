@@ -5,3 +5,7 @@ export const colorBlack = "#000000"
 export const fontFira = "'Fira Sans Extra Condensed', sans-serif";
 export const fontPlay = "'Playfair Display', serif";
 export const fontMavenPro = "'Maven Pro', sans-serif";
+export const tabletL = "1024px";
+export const tabletS = "900px";
+export const fonoL = "768px";
+export const fonoS = "600px";

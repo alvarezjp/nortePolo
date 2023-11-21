@@ -7,7 +7,7 @@ import {
   StyledItems,
   StyledBtnCompra,
   StyledDropDown,
-  StyledNavRes,
+  StyledBurgerDown,
 } from "./styled";
 import { Link } from "react-router-dom";
 import { TextareaAutosize } from "@mui/material";
@@ -16,10 +16,11 @@ const Menu = () => {
   let timeOut;
 
   const [btnCompraOpen, setCompraOpen] = useState(false);
-  const [btnBurguer,setBtnBurguer] = useState(false);
+  const [btnBurguer, setBtnBurguer] = useState(false);
 
   const activateBtn = () => {
     setCompraOpen(true);
+    DeleteTemporizador();
   };
   const retrasoLeave = () => {
     timeOut = setTimeout(() => {
@@ -29,9 +30,10 @@ const Menu = () => {
   const DeleteTemporizador = () => {
     clearTimeout(timeOut);
   };
-  const amburguesa = ()=> {
-    console.log("mostrando");
-  }
+  const amburguesa = () => {
+    setBtnBurguer(!btnBurguer);
+    console.log(btnBurguer);
+  };
 
   return (
     <StyledNav>
@@ -50,7 +52,7 @@ const Menu = () => {
 
         <div>
           <StyledBtnCompra
-            onMouseEnter={activateBtn}
+            onMouseEnter={(activateBtn)}
             onMouseLeave={retrasoLeave}>
             COMPRAR
           </StyledBtnCompra>
@@ -88,10 +90,15 @@ const Menu = () => {
           </ScrollLink>
         </li>
       </StyledItems>
-     <BsFillBasketFill className="basket"/>
-     <GiHamburgerMenu className="cicleList" onClick={amburguesa}>
-
-     </GiHamburgerMenu>
+      <BsFillBasketFill className="basket" />
+      <GiHamburgerMenu className="cicleList" onClick={amburguesa} />
+      {btnBurguer && (
+        <StyledBurgerDown>
+          <li>Mochila</li>
+          <li>Bolsas de lona</li>
+          <li>Mochilas de viaje</li>
+        </StyledBurgerDown>
+      )}
     </StyledNav>
   );
 };
