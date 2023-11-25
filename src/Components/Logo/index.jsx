@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colorLogo1,colorLogo2,fontFira } from "../UI/variables";
+import { colorLogo1,colorLogo2,fonoL,fontFira, tabletL, tabletS } from "../UI/variables";
 
 const StyledLogo = styled.h1`
 font-family: ${fontFira};
@@ -13,6 +13,12 @@ margin-left:64px;
 span{
     color:${colorLogo1};
 }
+@media screen and (max-width: ${tabletS}) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: ${fonoL}) {
+    font-size: 30px;
+  }
 `
 
 const Logo = () =>{

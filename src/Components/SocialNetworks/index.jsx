@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { responsive1 } from "../UI/variables";
+import { tabletL } from "../UI/variables";
 
 const StyledSocial = styled.section`
   height: 215px;
@@ -15,7 +15,7 @@ const StyledSocial = styled.section`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  @media screen and (max-width: ${responsive1}) {
+  @media screen and (max-width: ${tabletL}) {
     height: 215px;
     width: 70px;
   }
@@ -26,7 +26,7 @@ const StyledImg = styled.img`
   &:hover {
     cursor: pointer;
   }
-  @media screen and (max-width:${responsive1}) {
+  @media screen and (max-width:${tabletL}) {
     width: 35px;
   }
 `;

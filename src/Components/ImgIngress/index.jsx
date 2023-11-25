@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { colorWhite, fontFira, fontPlay, responsive1 } from "../UI/variables";
+import { colorWhite, fontFira, fontPlay, tabletL } from "../UI/variables";
 import { HiChevronDown } from "react-icons/hi";
 import { SubTitle, Title } from "../UI";
 import { Link as ScrollLink } from "react-scroll";
@@ -17,7 +17,7 @@ const StyledIngress = styled.section`
 `;
 export const StyledTiltle = styled(Title)`
   padding-top: 15vh;
-  @media screen and (max-width:${responsive1}){
+  @media screen and (max-width:${tabletL}){
     font-size: 80px;
   }
 `;

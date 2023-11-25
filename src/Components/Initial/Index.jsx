@@ -12,12 +12,12 @@ const Initial = () => {
   return (
     <>
       <ImgIngress />
-      <NewComers />
-      <ImgMenu /> {/*Debo cambiar la transicion en este componente */}
+      {/* <NewComers />
+      <ImgMenu /> 
       <Oferta />
       <About />
       <Contact />
-      <JoinUp />
+      <JoinUp /> */}
     </>
   );
 };

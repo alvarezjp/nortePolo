@@ -3,7 +3,7 @@ import Logo from "../Logo";
 import Menu from "../Menu";
 import styled from "styled-components";
 import { BsFillBasketFill } from "react-icons/bs";
-import { responsive1 } from "../UI/variables";
+import { fonoL, tabletL } from "../UI/variables";
 
 const StyledHeader = styled.section`
   position: fixed;
@@ -18,9 +18,9 @@ const StyledHeader = styled.section`
   height: 100px;
   width: 100vw;
   z-index: 100;
-  /* @media screen and (max-width: ${responsive1}) {
+  @media screen and (max-width: ${fonoL}) {
     justify-content: center;
-  } */
+  }
 `;
 
 const Header = () => {

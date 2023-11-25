@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { BsFillBasketFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 import { Link as ScrollLink } from "react-scroll";
 import {
   StyledNav,
   StyledItems,
-  StyledBtnCompra,
   StyledDropDown,
   StyledBurgerDown,
 } from "./styled";
@@ -17,6 +19,8 @@ const Menu = () => {
 
   const [btnCompraOpen, setCompraOpen] = useState(false);
   const [btnBurguer, setBtnBurguer] = useState(false);
+  const [resBtnCompra,setResBtnCompra]=useState(false)
+  const pantallaMovil = useMediaQuery({ maxWidth: 900 });
 
   const activateBtn = () => {
     setCompraOpen(true);
@@ -32,8 +36,13 @@ const Menu = () => {
   };
   const amburguesa = () => {
     setBtnBurguer(!btnBurguer);
-    console.log(btnBurguer);
   };
+  const actionBtnResponsive = () => {
+    setCompraOpen(!btnCompraOpen);
+  };
+  const btnRespCompra = () => {
+  setResBtnCompra(!resBtnCompra)
+  }
 
   return (
     <StyledNav>
@@ -51,11 +60,13 @@ const Menu = () => {
         </p>
 
         <div>
-          <StyledBtnCompra
-            onMouseEnter={(activateBtn)}
-            onMouseLeave={retrasoLeave}>
+          <li
+            onMouseEnter={pantallaMovil ? null : activateBtn}
+            onMouseLeave={pantallaMovil ? null : retrasoLeave}
+            onClick={pantallaMovil ? actionBtnResponsive : null}
+            >
             COMPRAR
-          </StyledBtnCompra>
+          </li>
           {btnCompraOpen && (
             <StyledDropDown
               onMouseEnter={DeleteTemporizador}
@@ -91,12 +102,53 @@ const Menu = () => {
         </li>
       </StyledItems>
       <BsFillBasketFill className="basket" />
-      <GiHamburgerMenu className="cicleList" onClick={amburguesa} />
+      {btnBurguer?(<IoClose className="equis" onClick={amburguesa}/>):null}
+      {!btnBurguer?(<GiHamburgerMenu className="cicleList" onClick={amburguesa} />):null}
+      
       {btnBurguer && (
         <StyledBurgerDown>
-          <li>Mochila</li>
-          <li>Bolsas de lona</li>
-          <li>Mochilas de viaje</li>
+          <li>
+            <ScrollLink
+              activeClass="active"
+              to="start"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}>
+              INICIO
+            </ScrollLink>
+          </li>
+          <li>
+            <li
+              onClick={pantallaMovil ? actionBtnResponsive : null}
+              >
+              
+              COMPRAR
+              <IoIosArrowDown className="arrow" />
+            </li>
+          </li>
+          <li>
+            <ScrollLink
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}>
+              SOBRE NOSOTROS
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}>
+              CONTACTO
+            </ScrollLink>
+          </li>
         </StyledBurgerDown>
       )}
     </StyledNav>
