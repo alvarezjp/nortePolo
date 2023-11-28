@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Initial />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

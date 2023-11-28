@@ -12,8 +12,8 @@ const Initial = () => {
   return (
     <>
       <ImgIngress />
-      {/* <NewComers />
-      <ImgMenu /> 
+      {/* <NewComers /> */}
+      {/* <ImgMenu /> 
       <Oferta />
       <About />
       <Contact />
@@ -24,3 +24,5 @@ const Initial = () => {
 
 
 export default Initial;
+
+// seguir con el responsive del newcommer

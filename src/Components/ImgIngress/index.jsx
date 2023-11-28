@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import React from "react";
-import { colorWhite, fontFira, fontPlay, tabletL } from "../UI/variables";
+import {
+  colorWhite,
+  fontFira,
+  fontPlay,
+  tabletL,
+  tabletS,
+  fonoL,
+  fonoS,
+} from "../UI/variables";
 import { HiChevronDown } from "react-icons/hi";
 import { SubTitle, Title } from "../UI";
 import { Link as ScrollLink } from "react-scroll";
@@ -17,8 +25,18 @@ const StyledIngress = styled.section`
 `;
 export const StyledTiltle = styled(Title)`
   padding-top: 15vh;
-  @media screen and (max-width:${tabletL}){
+  @media screen and (max-width: ${tabletL}) {
     font-size: 80px;
+  }
+  @media screen and (max-width: ${tabletS}) {
+    font-size: 70px;
+    text-align: center;
+  }
+  @media screen and (max-width: ${fonoL}) {
+    /* font-size: 60px; */
+  }
+  @media screen and (max-width: ${fonoS}) {
+    /* font-size: 50px; */
   }
 `;
 
@@ -50,7 +68,15 @@ const ImgIngress = () => {
       <Block>
         <StyledTiltle>PLANEA TU AVENTURA</StyledTiltle>
         <StyledSubTitle>COMPRAR AHORA</StyledSubTitle>
-        <ScrollLink  activeClass='active' to='down'spy={true} smooth={true} offset={-100} duration={500}><HiChevronDown className="down" /> </ScrollLink>
+        <ScrollLink
+          activeClass="active"
+          to="down"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}>
+          <HiChevronDown className="down" />{" "}
+        </ScrollLink>
       </Block>
     </StyledIngress>
   );

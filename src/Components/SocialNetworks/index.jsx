@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { tabletL } from "../UI/variables";
+import { tabletL,tabletS } from "../UI/variables";
 
 const StyledSocial = styled.section`
   height: 215px;
@@ -19,6 +19,10 @@ const StyledSocial = styled.section`
     height: 215px;
     width: 70px;
   }
+  @media screen and (max-width: ${tabletS}) {
+    display: none;
+  }
+  
 `;
 
 const StyledImg = styled.img`
