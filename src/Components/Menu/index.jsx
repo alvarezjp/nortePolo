@@ -10,6 +10,8 @@ import {
   StyledItems,
   StyledDropDown,
   StyledBurgerDown,
+  StyMenuResCompra,
+  StydBtnCompraRes,
 } from "./styled";
 import { Link } from "react-router-dom";
 import { TextareaAutosize } from "@mui/material";
@@ -19,7 +21,7 @@ const Menu = () => {
 
   const [btnCompraOpen, setCompraOpen] = useState(false);
   const [btnBurguer, setBtnBurguer] = useState(false);
-  const [resBtnCompra,setResBtnCompra]=useState(false)
+  const [resBtnCompra, setResBtnCompra] = useState(false);
   const pantallaMovil = useMediaQuery({ maxWidth: 900 });
 
   const activateBtn = () => {
@@ -41,8 +43,8 @@ const Menu = () => {
     setCompraOpen(!btnCompraOpen);
   };
   const btnRespCompra = () => {
-  setResBtnCompra(!resBtnCompra)
-  }
+    setResBtnCompra(!resBtnCompra);
+  };
 
   return (
     <StyledNav>
@@ -63,8 +65,7 @@ const Menu = () => {
           <li
             onMouseEnter={pantallaMovil ? null : activateBtn}
             onMouseLeave={pantallaMovil ? null : retrasoLeave}
-            onClick={pantallaMovil ? actionBtnResponsive : null}
-            >
+            onClick={pantallaMovil ? actionBtnResponsive : null}>
             COMPRAR
           </li>
           {btnCompraOpen && (
@@ -102,9 +103,11 @@ const Menu = () => {
         </li>
       </StyledItems>
       <BsFillBasketFill className="basket" />
-      {btnBurguer?(<IoClose className="equis" onClick={amburguesa}/>):null}
-      {!btnBurguer?(<GiHamburgerMenu className="cicleList" onClick={amburguesa} />):null}
-      
+      {btnBurguer ? <IoClose className="equis" onClick={amburguesa} /> : null}
+      {!btnBurguer ? (
+        <GiHamburgerMenu className="cicleList" onClick={amburguesa} />
+      ) : null}
+
       {btnBurguer && (
         <StyledBurgerDown>
           <li>
@@ -119,13 +122,18 @@ const Menu = () => {
             </ScrollLink>
           </li>
           <li>
-            <li
-              onClick={pantallaMovil ? actionBtnResponsive : null}
-              >
-              
+            <StydBtnCompraRes onClick={btnRespCompra}>
               COMPRAR
+              
               <IoIosArrowDown className="arrow" />
-            </li>
+            </StydBtnCompraRes>
+            {resBtnCompra && (
+                 <StyMenuResCompra>
+                 <li>Mochila</li>
+                 <li>Bolsas de lona</li>
+                 <li>Mochilas de viaje</li>
+               </StyMenuResCompra>
+              )}
           </li>
           <li>
             <ScrollLink

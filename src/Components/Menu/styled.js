@@ -155,9 +155,7 @@ export const StyledBurgerDown = styled(StyledDropDown)`
       padding-bottom: 8px;
     }
     .arrow {
-      position: absolute;
-      right: 50px;
-      /* top: 90px; */
+      font-size: 25px;
     }
     li:hover {
       cursor: pointer;
@@ -166,18 +164,14 @@ export const StyledBurgerDown = styled(StyledDropDown)`
   }
 `;
 
-export const StyledCompraRes = styled.nav`
-  margin-right: 30px;
-  border: 3px solid red;
-  height: auto;
-  border: 1px solid green;
-  /* @media screen and (max-width: 1050px) and (min-width: 1051px) {
-    border: 1px solid yellow;
-    display: grid;
-  } */
-`;
+export const StyMenuResCompra = styled.ul`
+display: flex;
+flex-direction: column;
+gap: 8px;
+padding: 24px 0px;
+`
 
-// debemos ver la distancia que hay entre los elementos del navbar
-export const StyledBtnCompra = styled.li`
- 
+export const StydBtnCompraRes = styled.li`
+ display: flex;
+ justify-content: center;
 `;
