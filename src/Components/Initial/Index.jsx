@@ -12,7 +12,7 @@ const Initial = () => {
   return (
     <>
       <ImgIngress />
-      {/* <NewComers /> */}
+      <NewComers />
       {/* <ImgMenu /> 
       <Oferta />
       <About />
