@@ -8,23 +8,22 @@ const ImgText = (props) => {
     actualizarMostrar(!mostrarTexto);
   };
   return (
-    <StyleBox>
-      <div
-        onMouseEnter={setEstados}
-        onMouseLeave={setEstados}
-        style={{ position: "relative" }}>
+    <StyleBox
+        // onMouseEnter={setEstados}
+        // onMouseLeave={setEstados}
+        // style={{ position: "relative" }}
+        >
         <MenuImg
           $backgroundImage={props.$backgroundImage}
           $actiFilter={mostrarTexto}
         />
-        <CSSTransition
+        {/* <CSSTransition
           in={mostrarTexto}
           timeout={{ enter: 150, exit: 200 }}
           classNames="fade"
           unmountOnExit>
           <StyledText>{props.content}</StyledText>
-        </CSSTransition>
-      </div>
+        </CSSTransition> */}
     </StyleBox>
   );
 };
@@ -43,6 +42,7 @@ const ImgMenu = () => {
       <ImgText
         $backgroundImage="/pagPrincipal/img-5.png"
         content="BOLSOS DE VIAJE "
+        className="tercero"
       />
     </StyledImgMenu>
   );

@@ -6,7 +6,7 @@ import { tabletS } from "../UI/variables";
 const StyledNewComers = styled.section`
   display: flex;
   box-sizing: border-box;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   @media screen and (max-width: ${tabletS}) {
     flex-direction: column;
   }

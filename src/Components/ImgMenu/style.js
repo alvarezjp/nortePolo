@@ -1,8 +1,14 @@
 import styled from "styled-components";
+import { tabletL } from "../UI/variables";
 
 export const StyledImgMenu = styled.section`
   display: flex;
   box-sizing: border-box;
+  @media screen and (max-width: ${tabletL}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 export const StyledText = styled.p`
@@ -30,6 +36,10 @@ export const StyledText = styled.p`
     opacity: 0;
     transition: opacity 0.3s ease-in, transform 0.3s ease-in;
   }
+  @media screen and (tabletL) {
+    display: none;
+  }
+ 
 `;
 
 export const StyleBox = styled.div`
@@ -37,6 +47,25 @@ export const StyleBox = styled.div`
   position: relative;
   overflow: hidden;
   /* Estilos de entrada */
+  @media screen and (max-width: ${tabletL}) {
+    &:nth-child(1){
+     grid-column: 1;
+     grid-row:1 ;
+    }
+    &:nth-child(2){
+      grid-column: 1;
+     grid-row:2;
+    } 
+    &:nth-child(3){
+      grid-column: 2;
+     grid-row:1 / span 2;
+     border: 4px solid blue;  
+     
+    } 
+    .tercero{
+      border: 9px solid red;
+    }
+  }
 `;
 
 export const MenuImg = styled.article`
@@ -51,4 +80,10 @@ export const MenuImg = styled.article`
   box-sizing: border-box;
   filter: ${(props) => (props.$actiFilter ? "brightness(40%)" : "none")};
   transition: filter 0.5s ease-out;
-`;
+
+  @media screen and (max-width: ${tabletL}) {
+    width:auto;
+    
+  }
+  
+`

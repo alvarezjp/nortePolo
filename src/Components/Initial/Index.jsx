@@ -13,11 +13,11 @@ const Initial = () => {
     <>
       <ImgIngress />
       <NewComers />
-      {/* <ImgMenu /> 
+      <ImgMenu /> 
       <Oferta />
       <About />
       <Contact />
-      <JoinUp /> */}
+      <JoinUp />
     </>
   );
 };
