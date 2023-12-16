@@ -6,18 +6,20 @@ import Oferta from "../Oferta/Oferta";
 import About from "../About";
 import Contact from "../Contact";
 import JoinUp from "../JoinUp/Index";
+import GridEjemplo from "../EjemploGrid";
 
 
 const Initial = () => {
   return (
     <>
       <ImgIngress />
-      <NewComers />
-      {/* <ImgMenu /> 
-      <Oferta />
+      {/* <NewComers /> */}
+      <ImgMenu /> 
+      {/* <Oferta />
       <About />
       <Contact />
       <JoinUp /> */}
+      {/* <GridEjemplo/> */}
     </>
   );
 };

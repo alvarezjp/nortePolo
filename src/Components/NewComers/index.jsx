@@ -6,7 +6,6 @@ import { tabletS } from "../UI/variables";
 const StyledNewComers = styled.section`
   display: flex;
   box-sizing: border-box;
-  border: 2px solid red;
   @media screen and (max-width: ${tabletS}) {
     flex-direction: column;
   }
@@ -36,6 +35,7 @@ const StyledImg = styled.div`
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
+  background-repeat: no-repeat;
   width: 50vw;
   height: 70vh;
   @media screen and (max-width: ${tabletS}) {

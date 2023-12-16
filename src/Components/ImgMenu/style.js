@@ -1,8 +1,13 @@
 import styled from "styled-components";
+import { tabletL } from "../UI/variables";
 
 export const StyledImgMenu = styled.section`
   display: flex;
   box-sizing: border-box;
+  @media screen and (max-width: ${tabletL}) {
+    /* flex-direction: column; */
+    display: grid;
+  }
 `;
 
 export const StyledText = styled.p`
@@ -36,7 +41,22 @@ export const StyleBox = styled.div`
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  /* Estilos de entrada */
+  @media screen and (max-width: ${tabletL}) {
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    &:nth-child(2) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    
+    &:nth-child(3) {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+    }
+  }
+    /* Estilos de entrada */
 `;
 
 export const MenuImg = styled.article`
@@ -51,4 +71,8 @@ export const MenuImg = styled.article`
   box-sizing: border-box;
   filter: ${(props) => (props.$actiFilter ? "brightness(40%)" : "none")};
   transition: filter 0.5s ease-out;
+
+  @media screen and (max-width: ${tabletL}) {
+    width:auto;
+  }
 `;
