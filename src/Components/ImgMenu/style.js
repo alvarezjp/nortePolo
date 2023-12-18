@@ -50,13 +50,13 @@ export const StyleBox = styled.div`
       grid-column: 1;
       grid-row: 2;
     }
-    
+
     &:nth-child(3) {
       grid-column: 2;
-      grid-row: 1 / span 3;
+      grid-row: 1 / span 2;
     }
   }
-    /* Estilos de entrada */
+  /* Estilos de entrada */
 `;
 
 export const MenuImg = styled.article`
@@ -70,9 +70,12 @@ export const MenuImg = styled.article`
   background-size: cover;
   box-sizing: border-box;
   filter: ${(props) => (props.$actiFilter ? "brightness(40%)" : "none")};
-  transition: filter 0.5s ease-out;
+  transition: filter 0.5s ease-out;  
 
   @media screen and (max-width: ${tabletL}) {
-    width:auto;
+    width: auto;
+    &.tercero{
+      height:100vh;
+    }
   }
 `;
