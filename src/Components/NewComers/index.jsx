@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Title, SubTitle } from "../UI";
 import { tabletS } from "../UI/variables";
+import { useMediaQuery } from "react-responsive";
 
 const StyledNewComers = styled.section`
   display: flex;
@@ -45,6 +46,7 @@ const StyledImg = styled.div`
 `;
 
 const NewComers = () => {
+  const screenFono = useMediaQuery({minWidth:tabletS})
   return (
     <StyledNewComers id="down">
       <BoxText>
@@ -52,7 +54,7 @@ const NewComers = () => {
         <StyledTitle>LLEGADOS</StyledTitle>
         <SubTitle> COMPRAR AHORA</SubTitle>
       </BoxText>
-      <StyledImg />
+     {screenFono &&  (<StyledImg />)}
     </StyledNewComers>
   );
 };
