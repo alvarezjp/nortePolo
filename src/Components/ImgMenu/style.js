@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { tabletL } from "../UI/variables";
+import { fonoL, fonoS, tabletL } from "../UI/variables";
+import { SubTitle } from "../UI";
 
 export const StyledImgMenu = styled.section`
   display: flex;
@@ -10,7 +11,7 @@ export const StyledImgMenu = styled.section`
   }
 `;
 
-export const StyledText = styled.p`
+export const StyledText = styled(SubTitle)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -56,6 +57,21 @@ export const StyleBox = styled.div`
       grid-row: 1 / span 2;
     }
   }
+  @media screen and (max-width: ${fonoS}) {
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    &:nth-child(2) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1;
+      grid-row: 3
+    }
+  }
   /* Estilos de entrada */
 `;
 
@@ -70,12 +86,18 @@ export const MenuImg = styled.article`
   background-size: cover;
   box-sizing: border-box;
   filter: ${(props) => (props.$actiFilter ? "brightness(40%)" : "none")};
-  transition: filter 0.5s ease-out;  
+  transition: filter 0.5s ease-out;
 
   @media screen and (max-width: ${tabletL}) {
+    filter: ${(props) => (props.$actiFilter ? "brightness(70%)" : "none")};
     width: auto;
-    &.tercero{
-      height:100vh;
+    &.tercero {
+      height: 100vh;
     }
+    @media screen and (max-width: ${fonoS}) {
+    &.tercero {
+      height: 50vh;
+    }
+  }
   }
 `;
