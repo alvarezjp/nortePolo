@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { SubTitle, Title } from "../UI";
+import { tabletL, tabletS } from "../UI/variables";
 
 export const StyledOferta = styled.section`
   height: 100vh;
-  width: auto;
   background-color: black;
   box-sizing: border-box;
   display: flex;
@@ -23,7 +23,6 @@ export const StyledSubTitle = styled(SubTitle)`
   font-size: 24px;
   padding-bottom: 30px;
   box-sizing: border-box;
-  /* border: 1px solid green; */
 `;
 export const StyledImgProduct = styled.div`
   width: 25vw;
@@ -31,13 +30,26 @@ export const StyledImgProduct = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
+  border: 1px solid green;
+  @media screen and (max-width: ${tabletS}) {
+    border: 1px solid blue;
+    display: absolute;
+    width: auto;
+  }
 `;
 
 export const TitleProduct = styled(Title)`
-  font-size: 31px;
+  font-size: 32px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0px;
+  box-sizing: border-box;
+  @media screen and (max-width: ${tabletL}) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: ${tabletS}) {
+    font-size: 20px;
+  }
 `;
 
 export const SubTitleProduct = styled(SubTitle)`
@@ -45,19 +57,38 @@ export const SubTitleProduct = styled(SubTitle)`
   letter-spacing: 0px;
 `;
 
-export const ImgProduct = styled.img`
-  width: 305px;
+export const ImgProduct = styled.div`
+  width: 100%;
   height: 340px;
+  background-image: ${(props) => `url(${props.$backgroundImage})`};
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const StyledProduct = styled.article`
-  width: 75vw;
+  /* width: 75vw; */
   display: flex;
-  justify-content: space-between;
+  border: 5px solid red;
+  @media screen and (max-width: ${tabletS}) {
+    border: 5px solid yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 0px;
+    :nth-child(1){
+      width: 10vw;
+    }
+    :nth-child(2){
+      width: 10vw;
+    }
+    :nth-child(3){
+      width: 10vw;
+    }
+  }
 `;
 export const BoxDetails = styled.article`
   height: 134px;
   width: 259px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
