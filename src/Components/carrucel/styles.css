@@ -1,0 +1,42 @@
+.slick-dots{
+    bottom: -50px;
+}
+
+.slick-dots li button:before {
+  color: gray;
+}
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+.esto {
+
+  /* border: 3px solid green; */
+  height: 70vh;
+  box-sizing: border-box;
+  width: 90vw;
+  border: 1px solid red;
+}
+
+div {
+  text-align: center;
+  justify-items: center;
+}
+
+h3 {
+  background-color: red;
+  padding-top: 30vh;
+  font-size: 80px;
+  height: 89vh;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev {
+    left: 3px;
+}
+
+.slick-prev, .slick-next{
+    z-index: 1;
+}

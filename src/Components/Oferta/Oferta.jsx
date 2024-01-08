@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import SimpleSlider from "../carrucel/carrusel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import {
   StyledOferta,
   StyledTiltle,
@@ -52,28 +56,37 @@ const Product = (props) => {
   );
 };
 
-const Oferta = () => {
+ const Oferta = () => {
+  const MinScreenS = useMediaQuery({ maxWidth: tabletS });
+  const MaxScreenS = useMediaQuery({ minWidth: tabletS });
   return (
     <StyledOferta>
       <StyledTiltle>AHORA EN OFERTA</StyledTiltle>
       <StyledSubTitle>HASTA 50% OFF</StyledSubTitle>
-      <StyledProduct>
-        <Product
-          $backgroundImage={"/pagPrincipal/img-6.webp"}
-          titulo={"MOCHILA DE LONA"}
-          subTitulo={"$ 1000"}
-        />
-        <Product
-          $backgroundImage={"/pagPrincipal/img-7.webp"}
-          titulo={"MOCHILA COMPLETA VIAJES"}
-          subTitulo={"$ 1000"}
-        />
-        <Product
-          $backgroundImage={"/pagPrincipal/img-8.webp"}
-          titulo={"MOCHILA CAMUFLADAS"}
-          subTitulo={"$ 1000"}
-        />
-      </StyledProduct>
+      {MinScreenS && (
+        <>
+        <SimpleSlider/>
+        </>
+        )}
+      {MaxScreenS && (
+        <StyledProduct>
+          <Product
+            $backgroundImage={"/pagPrincipal/img-6.webp"}
+            titulo={"MOCHILA DE LONA"}
+            subTitulo={"$ 1000"}
+          />
+          <Product
+            $backgroundImage={"/pagPrincipal/img-7.webp"}
+            titulo={"MOCHILA COMPLETA VIAJES"}
+            subTitulo={"$ 1000"}
+          />
+          <Product
+            $backgroundImage={"/pagPrincipal/img-8.webp"}
+            titulo={"MOCHILA CAMUFLADAS"}
+            subTitulo={"$ 1000"}
+          />
+        </StyledProduct>
+      )}
     </StyledOferta>
   );
 };
@@ -81,3 +94,4 @@ const Oferta = () => {
 // debemos seguir con la párte de agregar "ver detalle " a los textos
 
 export default Oferta;
+export {Product}

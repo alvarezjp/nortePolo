@@ -30,9 +30,7 @@ export const StyledImgProduct = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
-  border: 1px solid green;
   @media screen and (max-width: ${tabletS}) {
-    border: 1px solid blue;
     display: absolute;
     width: auto;
   }
@@ -68,9 +66,8 @@ export const ImgProduct = styled.div`
 export const StyledProduct = styled.article`
   /* width: 75vw; */
   display: flex;
-  border: 5px solid red;
   @media screen and (max-width: ${tabletS}) {
-    border: 5px solid yellow;
+  
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     gap: 0px;
@@ -118,3 +115,4 @@ export const ViewDetails = styled(Title)`
   font-size: 31px;
   letter-spacing: 0px;
 `;
+
